@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_dark"
     tools:context=".CalculoDatos">
 
     <TextView
@@ -11,7 +12,14 @@
         android:layout_width="373dp"
         android:layout_height="116dp"
         android:layout_marginTop="24dp"
+        android:layout_marginBottom="49dp"
         android:hint="Datos"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorHint="@android:color/darker_gray"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtPeso"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,12 +27,16 @@
 
     <EditText
         android:id="@+id/txtPeso"
-        android:layout_width="328dp"
-        android:layout_height="48dp"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
         android:layout_marginTop="165dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="Peso kg"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@android:color/darker_gray"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,48 +44,99 @@
 
     <EditText
         android:id="@+id/txtEstatura"
-        android:layout_width="322dp"
-        android:layout_height="44dp"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
         android:layout_marginTop="74dp"
         android:ems="10"
-        android:hint="Estatura mts"
+        android:hint="Estatura mts (1.20)"
         android:inputType="textPersonName|numberDecimal"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@android:color/darker_gray"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/txtPeso" />
 
     <Button
         android:id="@+id/btnCalcular"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="296dp"
+        android:layout_width="170dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginBottom="344dp"
+        android:backgroundTint="#FFC107"
         android:text="CALCULAR"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtEstatura" />
 
     <ImageView
         android:id="@+id/imgEstado"
         android:layout_width="300px"
         android:layout_height="300px"
+        android:layout_marginTop="32dp"
         android:layout_marginBottom="140dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.528"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnCalcular"
+        app:layout_constraintVertical_bias="0.383"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/tvResultado"
         android:layout_width="219dp"
         android:layout_height="84dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="126dp"
         android:layout_marginBottom="56dp"
-        android:text="IMC"
+        android:hint="SU IMC ES"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorHint="@android:color/darker_gray"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgEstado" />
+        app:layout_constraintTop_toTopOf="@+id/imgEstado"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="107dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="152dp"
+        android:text="SU IMC ES:"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.315"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgEstado" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:layout_marginBottom="4dp"
+        android:text="Ingrese Peso y Estatura en mts"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtPeso"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.345"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvInformacion"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -30,9 +30,9 @@ public class CalculoDatos extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_calculo_datos);
         Intent intent = getIntent();
         String nombre = intent.getStringExtra("nameCalcularDato");
-        String apellido = intent.getStringExtra("sernameCalcularDato");
+        String apellido = intent.getStringExtra("serNameCalcularDato");
         String email = intent.getStringExtra("emailCalcularDato");
-        String mensaje = "Hola " + nombre + " " + apellido + " , tu correo es: " + email + " bienvenido.";
+        String mensaje = "Hola " + nombre + " " + apellido + " , tu correo es: " + email + " Bienvenido.";
 
         informacion = findViewById(R.id.tvInformacion);
         resultado = findViewById(R.id.tvResultado);
@@ -69,19 +69,19 @@ public class CalculoDatos extends AppCompatActivity implements View.OnClickListe
 
     private void mostrarImagen(Double calcresultado) {
         if (calcresultado < 18.5){
-            imagen.setImageResource(R.drawable.bajo_peso);
+            imagen.setImageResource(R.drawable.bajo_peso2);
         }
         else if (calcresultado >= 18.5 && calcresultado <= 24.9){
-            imagen.setImageResource(R.drawable.peso_normal);
+            imagen.setImageResource(R.drawable.peso_normal2);
         }
         else if (calcresultado >= 25 && calcresultado <= 29.9){
-            imagen.setImageResource(R.drawable.sobre_peso);
+            imagen.setImageResource(R.drawable.sobre_peso2);
         }
         else if (calcresultado >= 30 && calcresultado <= 34.9){
-            imagen.setImageResource(R.drawable.obesidad);
+            imagen.setImageResource(R.drawable.obesidad2);
         }
         else {
-            imagen.setImageResource(R.drawable.obesidad_extrema);
+            imagen.setImageResource(R.drawable.obesidad_extrema2);
         }
     }
 
